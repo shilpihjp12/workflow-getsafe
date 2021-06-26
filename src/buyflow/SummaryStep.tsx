@@ -3,14 +3,16 @@ import { Link } from 'react-router-dom'
 
 interface SummaryStepProps {
   collectedData: {
-    email: string
-    age: number
-  }
+    name: string;
+    email: string;
+    age: number;
+  };
 }
 
 const SummaryStep: React.FC<SummaryStepProps> = (props) => {
   return (
     <>
+      <div>Name: {props.collectedData.name}</div>
       <div>Email: {props.collectedData.email}</div>
       <div>Age: {props.collectedData.age}</div>
       <div>
